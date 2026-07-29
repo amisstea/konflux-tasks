@@ -24,11 +24,11 @@ spec:
     - name: workflow
       value: hypershift-hostedcluster-workflow
     - name: clusterProfile
-      value: openshift-org-aws
+      value: aws-konflux-stg
     - name: env
-      value: '{"COMPUTE_NODE_TYPE": "m5.xlarge", "HYPERSHIFT_NODE_COUNT": "3"}'
+      value: '{"COMPUTE_NODE_TYPE": "m5.xlarge", "HYPERSHIFT_NODE_COUNT": "3", "HOSTED_MANAGEMENT_CLUSTER": "hosted-mgmt2"}'
     - name: releases
-      value: '{"latest":{"release":{"channel":"stable","version":"4.17","architecture":"multi"}}}'
+      value: '{"latest":{"release":{"channel":"stable","version":"4.21","architecture":"multi"}}}'
   - name: run-test
     runAfter:
     - provision-ephemeral-cluster
